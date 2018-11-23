@@ -7,4 +7,10 @@ class Anagram
     @word = word
   end
 
+  def match(list)
+    anagrams = []
+    list.each {|x| anagrams << x if x.split("").sort == @word.split("").sort}
+    anagrams
+  end
+
 end
